@@ -31,15 +31,10 @@ wsServer.on('request', request => {
     console.log(message);
   });
 
-  connection.send(userID);
-});
-
-wsServer.on('message', () => {
-  console.log('message envoked');
-});
-
-wsServer.on('close', () => {
-  console.log('closing connection');
+  connection.on('close', () => {
+    console.log(new Date() + ' Peer ' + userID + ' disconnected.');
+    delete clients[userID];
+  });
 });
 
 module.exports = socket;
