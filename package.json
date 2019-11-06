@@ -1,0 +1,17 @@
+{
+  "name": "blockping-socketserver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/korynewton/blockping-socketserver.git",
+  "author": "Kory Newton <korybnewton@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "websocket": "^1.0.30"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  }
+}
