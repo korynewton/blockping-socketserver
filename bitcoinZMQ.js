@@ -12,7 +12,7 @@ async function zmqSubscription() {
       'received a message related to:',
       topic.toString('hex'),
       'containing message:',
-      message.toString('hex')
+      msg.toString('hex')
     );
   }
 }
