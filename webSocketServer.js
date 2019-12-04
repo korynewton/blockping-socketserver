@@ -26,10 +26,10 @@ wsServer.on('request', request => {
     'connected: ' + userID + ' in ' + Object.getOwnPropertyNames(clients)
   );
 
-  connection.on('message', message => {
-    console.log('message from client');
-    console.log(message);
-  });
+  // connection.on('message', message => {
+  //   console.log('message from client');
+  //   console.log(message);
+  // });
 
   connection.on('close', () => {
     console.log(new Date() + ' Peer ' + userID + ' disconnected.');
@@ -37,4 +37,4 @@ wsServer.on('request', request => {
   });
 });
 
-module.exports = socket;
+module.exports = { socket, clients };

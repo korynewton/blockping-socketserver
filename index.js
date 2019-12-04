@@ -1,4 +1,4 @@
-const socket = require('./webSocketServer');
+const socket = require('./webSocketServer').socket;
 const zmqSubscription = require('./bitcoinZMQ');
 
 const PORT = process.env.PORT || 8000;
